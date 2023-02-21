@@ -14,15 +14,13 @@ public class testCSV {
 			while ((line = br.readLine())!= null) {
 				row++;
 				String[] values = line.split(",");
-				//if(values.length >=38) {
-						System.out.println(row + "row\t"  + values[0]);
-				//}
-					
-				
-			}
-		}catch(FileNotFoundException e) {
+					if(values.length>4) {
+						System.out.println(row + "row\t"  + values[10]);
+					}
+			}	
+			}catch(FileNotFoundException e) {
 			e.printStackTrace();
-		}catch(@SuppressWarnings("hiding") IOException e) {
+		}catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
