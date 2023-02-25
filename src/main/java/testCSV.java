@@ -12,12 +12,14 @@ public class testCSV {
 			BufferedReader br = new BufferedReader(new FileReader(Path));
 			int row=0;
 			while ((line = br.readLine())!= null) {
+				
 				row++;
 				String[] values = line.split(",");
 					if(values.length>4) {
 						System.out.println(row + "row\t"  + values[10]);
 					}
 			}	
+			br.close();
 			}catch(FileNotFoundException e) {
 			e.printStackTrace();
 		}catch(IOException e) {
